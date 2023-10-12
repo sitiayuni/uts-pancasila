@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vrentify</title>
+    <link rel="stylesheet" href="assets/css/style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body>
+    
+    <header>
+        <a href="#" class="brand">Vrentify</a>
+        <div class="menu-btn">
+
+        </div>
+        <div class="nav">
+            <div class="nav-items">
+                <a href="home.html">Beranda</a>
+                <a href="#">Tentang</a>
+                <a href="variety.html">Variasi</a>
+                <a href="#">Solusi</a>
+                <a href="contact.html">Kontak</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="variety">
+        <video class="video-slide active" src="/assets/video/video1.mp4" autoplay muted loop></video>
+        <video class="video-slide active" src="/assets/video/video2.mp4" autoplay muted loop></video>
+        <video class="video-slide active" src="/assets/video/video1.mp4" autoplay muted loop></video>
+        <video class="video-slide active" src="/assets/video/video1.mp4" autoplay muted loop></video>
+        
+        <div class="content active">
+            <h1>Kekerasan Seksual <br><span>Verbal</span></h1>
+            <p>
+                Kekerasan seksual verbal merujuk pada 
+                tindakan menggunakan kata-kata atau bahasa yang merendahkan, 
+                melecehkan, atau mengintimidasi seseorang secara seksual tanpa izin 
+                atau persetujuan mereka. Ini bisa mencakup komentar cabul, ejekan seksual, ancaman, atau pelecehan verbal lainnya yang 
+                membuat korban merasa tidak aman, terhina, atau terganggu secara emosional. 
+            </p>
+        </div>
+        <div class="content">
+            <h1>Kekerasan Seksual<br><span>Terhadap Anak</span></h1>
+            <p>
+                Kekerasan seksual terhadap anak adalah tindakan yang melibatkan eksploitasi seksual terhadap 
+                individu yang masih di bawah usia dewasa. Hal ini mencakup tindakan pelecehan seksual, pemaksaan seksual, 
+                perdagangan anak untuk tujuan seksual, atau eksploitasi seksual anak-anak dalam berbagai bentuk.
+            </p>
+        </div>
+        <div class="content">
+            <h1>Kekerasan Seksual<br><span>Berbasis Gender</span></h1>
+            <p>
+                Kekerasan seksual verbal merujuk pada 
+                tindakan menggunakan kata-kata atau bahasa yang merendahkan, 
+                melecehkan, atau mengintimidasi seseorang secara seksual tanpa izin 
+                atau persetujuan mereka. 
+            </p>
+        </div>
+        <div class="content">
+            <h1>Kekerasan Seksual <br><span>Verbal</span></h1>
+            <p>
+                Kekerasan seksual verbal merujuk pada 
+                tindakan menggunakan kata-kata atau bahasa yang merendahkan, 
+                melecehkan, atau mengintimidasi seseorang secara seksual tanpa izin 
+                atau persetujuan mereka. 
+            </p>
+        </div>
+
+        <div class="slider-nav">
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        const menuBtn = document.querySelector(".menu-btn");
+        const nav = document.querySelector(".nav")
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            nav.classList.toggle("active");
+        });
+
+        // slider video
+        
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+        btns.forEach((btn) =>{
+            btn.classList.remove("active");
+        });
+
+        slides.forEach((slide) =>{
+            slide.classList.remove("active");
+        });
+
+        contents.forEach((content) =>{
+            content.classList.remove("active");
+        });
+
+        btns[manual].classList.add("active");
+        slides[manual].classList.add("active");
+        contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+            sliderNav(i);
+        });
+    });
+    </script>
+</body>
+</html>

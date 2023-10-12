@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vrentify</title>
+    <link rel="stylesheet" href="assets/css/style1.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<body>
+    <header>
+        <a href="#" class="brand">Vrentify</a>
+        <div class="menu-btn">
+
+        </div>
+        <div class="nav">
+            <div class="nav-items">
+                <a href="home.html">Beranda</a>
+                <a href="#">Tentang</a>
+                <a href="variety.html">Variasi</a>
+                <a href="#">Solusi</a>
+                <a href="contact.html">Kontak</a>
+            </div>
+        </div>
+    </header>
+   
+   <div class="container">
+    <div class="form">
+        <div class="contact-info">
+            <h3 class="title">Satgas PPKS Unila</h3>
+            <p>Satgas PPKS adalah bagian dari Perguruan Tinggi yang berfungsi sebagai pusat Pencegahan dan Penanganan Kekerasan Seksual di Perguruan Tinggi</p><br>
+            <div class="info">
+                <div class="information">
+                    <a href="https://instagram.com/satgasppksunila/"><img src="assets/images/ig.png"  class="icon" alt="ig_logo" /></a>
+                    <p>Satgas PPKS Unila</p><br>
+                </div>
+                <div class="information">
+                    <img src="assets/images/address.png"  class="icon" alt="ig_logo" />
+                    <p>Jl. Prof. Dr. Ir. Sumantri Brojonegoro No.1, Gedong Meneng, Kec. Rajabasa, Kota Bandar Lampung, Lampung 35141</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-form">
+            <span class="circle one"></span>
+            <span class="circle two"></span>
+
+            <form action="contact.html">
+                <h3 class="title">Kontak Kami</h3>
+                <div class="input-container">
+                    <input type="text" name="name" id="" class="input">
+                    <label for="">Nama</label>
+                    <span>Nama</span>
+                </div>
+                <div class="input-container">
+                    <input type="email" name="email" id="" class="input">
+                    <label for="">Email</label>
+                    <span>Email</span>
+                </div>
+                <div class="input-container">
+                    <input type="tel" name="phone" id="" class="input">
+                    <label for="">Telepon</label>
+                    <span>Telepon</span>
+                </div>
+                <div class="input-container textarea">
+                   <textarea name="pesan" id="" class="input"></textarea>
+                    <label for="">Pesan</label>
+                    <span>Pesan</span>
+                </div>
+                <input type="submit" value="submit" class="btn">
+            </form>
+        </div>
+
+    </div>
+   </div>
+
+    </section>
+    <script type="text/javascript">
+        const menuBtn = document.querySelector(".menu-btn");
+        const nav = document.querySelector(".nav")
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            nav.classList.toggle("active");
+        });
+
+        const inputs = document.querySelectorAll(".input");
+        function focusFunc(){
+            let parent = this.parentNode;
+            parent.classList.add("focus");
+        }
+
+        function blurFunc(){
+            let parent = this.parentNode;
+            if(this.value == ""){
+                parent.classList.remove("focus");
+            }
+
+        }
+
+        inputs.forEach((input) => {
+            input.addEventListener("focus", focusFunc);
+            input.addEventListener("blur", blurFunc)
+        })
+
+    </script>
+</body>
+</html>
